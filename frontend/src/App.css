@@ -1,0 +1,477 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #29251f;
+  background: #fffdf9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button, input {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.navbar {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  background: white;
+  border-bottom: 1px solid #f1eee8;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand-icon {
+  font-size: 29px;
+}
+
+.brand-accent {
+  color: #ec6540;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+}
+
+.cart-count {
+  background: #fff0e9;
+  color: #d84e2d;
+  border-radius: 50px;
+  padding: 4px 10px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin: 30px 5% 60px;
+  min-height: 350px;
+  padding: 55px 6%;
+  border-radius: 24px;
+  background: linear-gradient(115deg, #fff0e5, #ffe2ce);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: #d55b39;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(32px, 4.2vw, 54px);
+  line-height: 1.13;
+  letter-spacing: -2px;
+  margin: 18px 0;
+}
+
+.hero p {
+  color: #766c64;
+  margin-bottom: 28px;
+}
+
+.primary-button, .checkout-button {
+  display: inline-block;
+  border: none;
+  background: #e75f3b;
+  color: white;
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-button:hover, .checkout-button:hover {
+  background: #c94828;
+}
+
+.hero-food {
+  font-size: clamp(110px, 18vw, 210px);
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 20px 18px #bb694033);
+}
+
+.hero-decoration {
+  position: absolute;
+  bottom: 25px;
+  right: 7%;
+  font-size: 28px;
+  opacity: 0.8;
+}
+
+.menu-section, .cart-section {
+  padding: 0 7%;
+  margin-bottom: 65px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin: 7px 0 0;
+}
+
+.food-count {
+  color: #766c64;
+  font-size: 13px;
+}
+
+.search {
+  width: 100%;
+  padding: 15px 17px;
+  border: 1px solid #e9e2da;
+  border-radius: 12px;
+  outline: none;
+  background: white;
+  margin-bottom: 25px;
+}
+
+.search:focus {
+  border-color: #e75f3b;
+  box-shadow: 0 0 0 3px #e75f3b18;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.restaurant-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #eee8e0;
+  border-radius: 17px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px #3726150b;
+}
+
+.restaurant-art {
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.restaurant-art > span:first-child {
+  font-size: 75px;
+}
+
+.rating {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  padding: 6px 9px;
+  background: white;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.restaurant-info {
+  padding: 15px 16px 10px;
+}
+
+.restaurant-info h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.restaurant-info p {
+  color: #81786f;
+  font-size: 12px;
+  margin: 0 0 9px;
+}
+
+.restaurant-info small {
+  color: #5c7761;
+}
+
+.food-list {
+  padding: 0 15px 12px;
+}
+
+.food-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #f1eee8;
+}
+
+.food-emoji {
+  font-size: 28px;
+}
+
+.food-details {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.food-details strong {
+  font-size: 12px;
+}
+
+.food-details span {
+  color: #766c64;
+  font-size: 12px;
+}
+
+.add-button {
+  background: #fff4ed;
+  color: #d65330;
+  border: 1px solid #f7d9c9;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #ffe4d5;
+}
+
+.message {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 15px;
+  border-radius: 10px;
+  background: #eaf6ed;
+  color: #28683c;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.message button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+.empty-cart {
+  padding: 25px;
+  background: white;
+  border: 1px dashed #e5dbd0;
+  border-radius: 12px;
+  color: #766c64;
+  text-align: center;
+}
+
+.cart-items {
+  background: white;
+  border: 1px solid #eee8e0;
+  border-radius: 12px;
+  padding: 0 18px;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1eee8;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #e8dfd5;
+  background: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 0;
+  font-size: 19px;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 15px;
+}
+
+.demo-note {
+  text-align: center;
+  color: #81786f;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+footer {
+  padding: 35px 7%;
+  background: #29251f;
+  color: white;
+  text-align: center;
+}
+
+footer .brand {
+  justify-content: center;
+}
+
+footer p, footer small {
+  color: #c9c0b7;
+}
+
+footer small {
+  font-size: 11px;
+}
+
+@media (max-width: 950px) {
+  .restaurant-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    padding: 40px 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .hero {
+    margin: 18px 4% 40px;
+    min-height: 300px;
+  }
+
+  .hero-food {
+    position: absolute;
+    right: -20px;
+    bottom: 20px;
+    opacity: 0.25;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+
+  .menu-section, .cart-section {
+    padding: 0 4%;
+  }
+
+  .restaurant-list {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
+
+/* CraveKart readability improvements */
+.app {
+  color: #1f2937;
+}
+
+.app h1,
+.app h2,
+.app h3,
+.app h4,
+.app strong,
+.app label {
+  color: #111827;
+}
+
+.app p,
+.app small,
+.app .restaurant-info p,
+.app .food-details span,
+.app .empty-cart,
+.app .demo-note,
+.app .cart-row,
+.app .cart-total {
+  color: #374151;
+}
+
+.app input {
+  color: #111827;
+  background-color: #ffffff;
+}
+
+.app input::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+.app .food-count {
+  color: #374151;
+}
